@@ -16,10 +16,10 @@ pipeline {
             sh 'mvn clean package'
           }
         }
-       post {
-         success {
-           archiveArtifacts artifacts: '**/taxi-booking-*.war'
-           junit testResults: '**/TEST-*.xml'
+        post {
+          success {
+             archiveArtifacts artifacts: '**/taxi-booking-*.war'
+             junit testResults: '**/TEST-*.xml'
          }
        }
     }

@@ -1,5 +1,5 @@
 pipeline {
-    agent [label 'MAVEN']
+    agent {label 'MAVEN'}
     options {
         // Timeout counter starts AFTER agent is allocated
         timeout(time: 30, unit: 'MINUTES')

@@ -8,13 +8,13 @@ pipeline {
     stages {
         stage('git') {
             steps {
-                git url = 'https://github.com/Maheshp70/taxi-booking.git'
-                branch = 'main'
+                git url: 'https://github.com/Maheshp70/taxi-booking.git'
+                branch: 'main'
             }
         }
-        stage(build) {
+        stage('build') {
           steps {
-            sh 'mvn package'
+            sh 'mvn clean package'
           }
         }
     }

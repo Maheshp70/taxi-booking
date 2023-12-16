@@ -3,14 +3,14 @@ pipeline {
     options {
         // Timeout counter starts AFTER agent is allocated
         timeout(time: 30, unit: 'MINUTES')
-    triggers { 
-      pollSCM('* * * * *')
-      }
+    triggers {
+        pollSCM('* * * * *')
+    }
     }
     stages {
         stage('git') {
             steps {
-                git url: 'https://github.com/Maheshp70/taxi-booking.git'
+                git url: 'https://github.com/Maheshp70/taxi-booking.git',
                 branch: 'main'
             }
         }
